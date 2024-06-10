@@ -57,4 +57,8 @@ RUN pip install --no-cache-dir flask \
     && pip install --no-cache-dir scipy
 RUN mkdir synthesizer
 COPY ./* ./synthesizer/
- 
+EXPOSE 5000
+EXPOSE 3000
+
+WORKDIR /synthesizer/
+CMD ["bash"]
