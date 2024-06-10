@@ -43,6 +43,9 @@ ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 # Install system dependencies and pip
 RUN apt-get update && apt-get install -y python3-pip
+
+RUN  python.exe -m pip install --upgrade pip
+
 RUN pip install --no-cache-dir flask \
     && pip install --no-cache-dir flask-cors \
     && pip install --no-cache-dir requests \
@@ -53,6 +56,7 @@ RUN  pip install --no-cache-dir torch \
 
 RUN pip install --no-cache-dir soundfile \
     && pip install --no-cache-dir scipy
+
 RUN mkdir synthesizer
 COPY ./* ./synthesizer/
 EXPOSE 5000
