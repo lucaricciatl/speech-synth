@@ -24,8 +24,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ENV CUDA_VERSION 12.5.0
 
-RUN apt-get update && apt-get install -y python3.8
-RUN ln -s /usr/bin/python3.8 /usr/bin/python3
 
 # For libraries in the cuda-compat-* package: https://docs.nvidia.com/cuda/eula/index.html#attachment-a
 RUN apt-get update && apt-get install -y --no-install-recommends \
