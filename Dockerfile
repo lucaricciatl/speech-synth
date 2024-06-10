@@ -50,8 +50,9 @@ RUN apt-get update && apt-get install -y python3-pip
 RUN pip install --no-cache-dir flask \
     && pip install --no-cache-dir flask-cors \
     && pip install --no-cache-dir requests \
-    && pip install --no-cache-dir IPython \
-    && pip install --no-cache-dir torch \
+    && pip install --no-cache-dir IPython 
+
+RUN  pip install --no-cache-dir torch \
     && pip install --no-cache-dir TTS \
     && pip install --no-cache-dir soundfile \
     && pip install --no-cache-dir scipy
