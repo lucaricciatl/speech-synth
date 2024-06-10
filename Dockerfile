@@ -49,8 +49,9 @@ RUN pip install --no-cache-dir flask \
     && pip install --no-cache-dir IPython 
 
 RUN  pip install --no-cache-dir torch \
-    && pip install --no-cache-dir TTS \
-    && pip install --no-cache-dir soundfile \
+    && pip install --no-cache-dir TTS 
+
+RUN pip install --no-cache-dir soundfile \
     && pip install --no-cache-dir scipy
 RUN mkdir synthesizer
 COPY ./* ./synthesizer/
