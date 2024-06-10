@@ -44,7 +44,7 @@ ENV NVIDIA_DRIVER_CAPABILITIES compute,utility
 # Install system dependencies and pip
 RUN apt-get update && apt-get install -y python3-pip
 
-RUN  python.exe -m pip install --upgrade pip
+RUN python3 -m pip install --upgrade pip
 
 RUN pip install --no-cache-dir flask \
     && pip install --no-cache-dir flask-cors \
