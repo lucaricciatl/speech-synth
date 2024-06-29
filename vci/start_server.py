@@ -44,4 +44,4 @@ def synthesize():
     return send_file(audio_bytes, mimetype='audio/wav', as_attachment=True, download_name='synthesized_audio.wav')
 
 if __name__ == '__main__':
-    app.run(host=host, port=5000)
+    app.run(host=host, port=5200)
