@@ -1,6 +1,6 @@
 echo 'Starting backend'
 # Avvia il primo programma in background
-echo 'cd vci && python start_server.py &'
+echo 'cd vci && python3 start_server.py &'
 cd vci && python start_server.py &
 echo '...'
 echo 'Done'
